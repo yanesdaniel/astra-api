@@ -1,6 +1,7 @@
 from flask import Flask
 
 from app.config import config_by_name
+from app.routes.health import health_bp
 
 
 def create_app(config_name="dev"):
@@ -9,6 +10,7 @@ def create_app(config_name="dev"):
     # Load configuration
     app.config.from_object(config_by_name[config_name])
 
-    # Register Blueprints here
+    # Blueprints
+    app.register_blueprint(health_bp, url_prefix="/api")
 
     return app
