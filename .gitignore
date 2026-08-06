@@ -216,3 +216,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Replit configuration files
+.agents/
+.pythonlibs/
+.ump/
+.replit
+replit.md
+
+# Kernel ephemerides file
+de421.bsp
