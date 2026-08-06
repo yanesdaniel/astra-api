@@ -1,0 +1,16 @@
+[project]
+name = "astra-api"
+version = "1.0.0"
+description = "A REST API to retrieve the position of various celestial bodies within the solar system"
+requires-python = ">=3.11"
+dependencies = [
+    "flask>=3.1.3",
+    "python-dotenv>=1.2.2",
+    "skyfield>=1.54",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.1",
+]
