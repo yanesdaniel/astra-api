@@ -224,5 +224,5 @@ __marimo__/
 .replit
 replit.md
 
-# Kernel ephemerides file
-de421.bsp
+# Ephemerides directory
+data/ephemerides
