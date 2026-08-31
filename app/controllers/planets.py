@@ -1,5 +1,4 @@
-import re
-from datetime import datetime
+from datetime import datetime as dt
 
 from skyfield.api import load, utc
 
@@ -23,7 +22,7 @@ def calculate_planet_coords(planet_name: str, datetime_obj: dict):
 
     ts = load.timescale()
     t = ts.from_datetime(
-        datetime(
+        dt(
             datetime_obj["year"],
             datetime_obj["month"],
             datetime_obj["day"],
@@ -58,18 +57,18 @@ def planets_id_controller(planet_id: int, datetime: str):
     if planet_id not in range(1, 9):
         raise PlanetIdNotFound(planet_id)
 
-    result = re.search(r"(\d+)/(\d+)/(\d+) (\d+):(\d+):(\d+)", datetime)
-    if not result:
+    try:
+        parsed_dt = dt.strptime(datetime, "%m/%d/%Y %H:%M:%S").replace(tzinfo=utc)
+        datetime_obj = {
+            "month": parsed_dt.month,
+            "day": parsed_dt.day,
+            "year": parsed_dt.year,
+            "hour": parsed_dt.hour,
+            "minute": parsed_dt.minute,
+            "second": parsed_dt.second,
+        }
+    except ValueError:
         raise InvalidDateTime(datetime)
-
-    datetime_obj = {
-        "month": int(result.group(1)),
-        "day": int(result.group(2)),
-        "year": int(result.group(3)),
-        "hour": int(result.group(4)),
-        "minute": int(result.group(5)),
-        "second": int(result.group(6)),
-    }
 
     match planet_id:
         case 1:
