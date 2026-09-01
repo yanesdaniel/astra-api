@@ -6,7 +6,7 @@ class PlanetIdNotFound(LookupError):
 
 
 class InvalidDateTime(ValueError):
-    """Raised when a datetime doesn´t follow the format MM/DD/YYYY HH:MM:SS"""
+    """Raised when a datetime doesn't follow the format MM/DD/YYYY HH:MM:SS"""
 
     def __init__(self, datetime: str):
         super().__init__(f"Datetime {datetime} is invalid")
