@@ -2,6 +2,10 @@
 name = "astra-api"
 version = "1.0.0"
 description = "A REST API to retrieve the position of various celestial bodies within the solar system"
+readme = "README.md"
+authors = [
+    { name = "Daniel Yanes", email = "danielyanes.eng@gmail.com" }
+]
 requires-python = ">=3.11"
 dependencies = [
     "flask>=3.1.3",
