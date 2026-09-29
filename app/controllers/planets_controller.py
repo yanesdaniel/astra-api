@@ -53,7 +53,7 @@ def calculate_planet_coords(planet_name: str, datetime_obj: dict):
     }
 
 
-def planets_id_controller(planet_id: int, datetime: str):
+def get_planet_by_id(planet_id: int, datetime: str):
     if planet_id not in range(1, 9):
         raise PlanetIdNotFound(planet_id)
 
