@@ -73,41 +73,49 @@ def get_planet_by_id(planet_id: int, datetime: str):
     match planet_id:
         case 1:
             return {
-                "planet": "Mercury",
+                "planet_id": 1,
+                "planet_name": "Mercury",
                 "coords": calculate_planet_coords("MERCURY", datetime_obj),
             }
         case 2:
             return {
-                "planet": "Venus",
+                "planet_id": 2,
+                "planet_name": "Venus",
                 "coords": calculate_planet_coords("VENUS", datetime_obj),
             }
         case 3:
             return {
-                "planet": "Earth",
+                "planet_id": 3,
+                "planet_name": "Earth",
                 "coords": calculate_planet_coords("EARTH", datetime_obj),
             }
         case 4:
             return {
-                "planet": "Mars",
+                "planet_id": 4,
+                "planet_name": "Mars",
                 "coords": calculate_planet_coords("MARS", datetime_obj),
             }
         case 5:
             return {
-                "planet": "Jupiter",
+                "planet_id": 5,
+                "planet_name": "Jupiter",
                 "coords": calculate_planet_coords("JUPITER", datetime_obj),
             }
         case 6:
             return {
-                "planet": "Saturn",
+                "planet_id": 6,
+                "planet_name": "Saturn",
                 "coords": calculate_planet_coords("SATURN", datetime_obj),
             }
         case 7:
             return {
-                "planet": "Uranus",
+                "planet_id": 7,
+                "planet_name": "Uranus",
                 "coords": calculate_planet_coords("URANUS", datetime_obj),
             }
         case 8:
             return {
-                "planet": "Neptune",
+                "planet_id": 8,
+                "planet_name": "Neptune",
                 "coords": calculate_planet_coords("NEPTUNE", datetime_obj),
             }
