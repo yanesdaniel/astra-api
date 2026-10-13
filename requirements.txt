@@ -17,4 +17,4 @@ python-dotenv==1.2.2
 ruff==0.16.1
 sgp4==2.27
 skyfield==1.54
-Werkzeug==3.1.8
+Werkzeug==3.1.9
